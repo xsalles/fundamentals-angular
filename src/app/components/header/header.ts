@@ -44,4 +44,8 @@ export class Header {
   }
 
   names = ['Pedro', 'João', 'Maria', 'Ana'];
+
+  a = 12;
+
+  b = 2;
 }

@@ -43,3 +43,11 @@
 @for (name of names; track $index) {
     <p>{{ name }}</p>
 }
+
+@if (names.length === 0) {
+    <p>It stopped in first conditional</p>
+} @else if (a / b === 6) {
+    <p>It stopped in second conditional</p>
+} @else {
+    <p>It stopped in else</p>
+}
