@@ -1,2 +1,10 @@
 <p>{{ titleHeader }}</p>
 <!-- Here I'm interpolating the title defined in .ts file -->
+<h1 [innerText]="'My text'"></h1>
+<!-- Here I'm using property binding to set the innerText of the h1 element statically -->
+
+<h1 [innerText]="subTitle"></h1>
+<!-- Here I'm using property binding to set the innerText of the h1 element dynamically -->
+
+<h1>{{ subTitle }}</h1>
+<!-- Here I'm using property binding to set the innerText of the h1 element dynamically in a easier way -->
