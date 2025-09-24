@@ -1,9 +1,17 @@
-<form #userForm="ngForm" action="" (ngSubmit)="onSubmit()">
+<!-- <form #userForm="ngForm" action="" (ngSubmit)="onSubmit()">
     <label for="name">Nome:</label>
     <input [(ngModel)]="username" type="text" name="name" id="name" required/>
 
     <button [disabled]="!userForm.form.valid">
         Enviar
     </button>
+</form>
+<p>{{ message }}</p> This is with Template Driven Forms -->
+
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+  <label for="name">Nome:</label>
+  <input type="text" name="name" id="name" formControlName="name" required />
+
+  <button [disabled]="!userForm.valid" type="submit">Enviar</button>
 </form>
 <p>{{ message }}</p>

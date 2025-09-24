@@ -1,17 +1,28 @@
 import { Component } from '@angular/core';
-import { FormsModule, NgModel } from '@angular/forms';
+import {
+  FormControl,
+  FormGroup,
+  FormsModule,
+  ReactiveFormsModule,
+  Validators,
+} from '@angular/forms';
 
 @Component({
   selector: 'app-form',
-  imports: [FormsModule],
+  imports: [FormsModule, ReactiveFormsModule],
   templateUrl: './form.html',
-  styleUrl: './form.css'
+  styleUrl: './form.css',
 })
 export class Form {
   username = '';
   message = '';
 
   onSubmit() {
-    this.message = 'Form submitted: ' + this.username;
+    this.message = 'Form submitted: ' + this.userForm.value.name;
+    console.log(this.message)
   }
+
+  userForm = new FormGroup({
+    name: new FormControl('', [Validators.required, Validators.minLength(3)]),
+  });
 }
