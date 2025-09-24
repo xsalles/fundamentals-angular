@@ -1,0 +1,9 @@
+<form #userForm="ngForm" action="" (ngSubmit)="onSubmit()">
+    <label for="name">Nome:</label>
+    <input [(ngModel)]="username" type="text" name="name" id="name" required/>
+
+    <button [disabled]="!userForm.form.valid">
+        Enviar
+    </button>
+</form>
+<p>{{ message }}</p>
