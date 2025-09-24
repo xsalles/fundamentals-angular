@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-header',
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './header.html',
   styleUrl: './header.css',
 })
@@ -13,12 +14,22 @@ export class Header {
 
   count = 0;
 
+  applyColor: boolean = false;
+
   increment() {
     this.count++;
   }
 
   handleClick() {
+    this.applyColor = !this.applyColor;
+
     this.increment();
     this.subTitle = 'Title updated' + this.count;
+  }
+
+  valueInput = 'initial value';
+
+  showValueInput() {
+    console.log(this.valueInput);
   }
 }
