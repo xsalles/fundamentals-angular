@@ -32,4 +32,6 @@ export class Header {
   showValueInput() {
     console.log(this.valueInput);
   }
+
+  bgColor = 'blue';
 }

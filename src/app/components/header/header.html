@@ -21,3 +21,8 @@
 
 <p [class.my-color]="applyColor">Testing class binding</p>
 <!-- Here I'm using class binding to conditionally apply the 'my-color' class -->
+
+<div [style.display]="bgColor === 'blue' ? 'flex' : 'block'">
+    <p>Text one</p>
+    <p>Text two</p>
+</div>
