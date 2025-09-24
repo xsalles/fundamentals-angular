@@ -52,8 +52,4 @@ export class Header {
   @Input() title: string = '';
 
   @Output() textOutput = new EventEmitter<string>();
-
-  showValue() {
-    this.textOutput.emit('Text from child to parent');
-  }
 }

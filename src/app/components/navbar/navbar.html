@@ -1,1 +1,10 @@
 <p>Navbar: {{ currentUser() }}</p>
+
+@for (post of postsList(); track post.id) {
+<div>
+  <p>{{ post.userId }}</p>
+  <p>{{ post.id }}</p>
+  <p>{{ post.title }}</p>
+  <p>{{ post.body }}</p>
+</div>
+}
