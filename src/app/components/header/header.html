@@ -12,10 +12,10 @@
 <button (click)="handleClick()">Update</button>
 <!-- It's called event binding, when I change one property, the other one updates automatically -->
 
-<input type="text" [value]="valueInput">
+<input type="text" [value]="valueInput" />
 <!-- This is a one way data binding -->
 
-<input type="text" [(ngModel)]="valueInput">
+<input type="text" [(ngModel)]="valueInput" />
 <button (click)="showValueInput()">Update value input</button>
 <!-- This is a two way data binding, it's synchronized (left to right and vice versa) -->
 
@@ -23,6 +23,19 @@
 <!-- Here I'm using class binding to conditionally apply the 'my-color' class -->
 
 <div [style.display]="bgColor === 'blue' ? 'flex' : 'block'">
-    <p>Text one</p>
-    <p>Text two</p>
+  <p>Text one</p>
+  <p>Text two</p>
 </div>
+<!-- Here I'm using style binding to conditionally set the display style of the div element -->
+
+<button (click)="changeRole()">Change role</button>
+
+@switch (role) { 
+    @case ('admin') {
+        <p>Hello Admin</p>
+    } @case ('user') {
+        <p>Hello User</p>
+    } @default {
+        <p>Hello Guest</p>
+    } 
+}

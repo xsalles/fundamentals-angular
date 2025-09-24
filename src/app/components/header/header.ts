@@ -34,4 +34,12 @@ export class Header {
   }
 
   bgColor = 'blue';
+
+  role = 'admin';
+
+  changeRole() {
+    this.role = this.role === 'admin' ? 'user' : 'admin';
+
+    this.bgColor = this.role === 'admin' ? 'red' : 'blue';
+  }
 }
