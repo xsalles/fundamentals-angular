@@ -42,4 +42,6 @@ export class Header {
 
     this.bgColor = this.role === 'admin' ? 'red' : 'blue';
   }
+
+  names = ['Pedro', 'João', 'Maria', 'Ana'];
 }
