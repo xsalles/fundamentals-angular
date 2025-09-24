@@ -10,4 +10,11 @@ import { Header } from "./components/header/header";
 })
 export class App {
   protected readonly title = signal('fundamentals-angular');
+
+  appTitle = 'Fundamentals Angular'
+
+  receiveValue(text: string) {
+    console.log("Received value from child: " + text)
+  }
+  
 }

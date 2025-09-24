@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, Output, SimpleChanges } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -48,4 +48,12 @@ export class Header {
   a = 12;
 
   b = 2;
+
+  @Input() title: string = '';
+
+  @Output() textOutput = new EventEmitter<string>();
+
+  showValue() {
+    this.textOutput.emit('Text from child to parent');
+  }
 }
